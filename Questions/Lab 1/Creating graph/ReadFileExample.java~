@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+public class ReadFileExample {
+  
+  public static void main(String[] args) {
+    int [][] graph;
+    BufferedReader obj= null;
+    try {
+      String str;
+      FileReader fr = new FileReader("text.txt");
+      obj = new BufferedReader(fr);
+      str = obj.readLine();
+      // convert this to int
+      int v = Integer.parseInt(str);
+      System.out.println(v);
+      
+      // creat the matrix 
+     
+      
+      while ((str = obj.readLine()) != null) {
+        // tokenize = a,b
+        StringTokenizer st = new StringTokenizer(str," ");
+        int token1 = Integer.parseInt(st.nextToken());
+        
+        int token2 = Integer.parseInt(st.nextToken());
+        
+        //connect graph [a][b] = 1 graph[b][a] = 1
+       
+      }
+      
+    } catch (IOException e) {
+      
+      e.printStackTrace();
+      
+    } 
+  }
+}
